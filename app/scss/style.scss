@@ -1,0 +1,93 @@
+@import "./null";
+@import "./mixins";
+
+.lock {
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1154px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.button {
+   background: linear-gradient(180deg, #ed769c 0%, #bb466b 100%);
+   border-radius: 8px;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 24px;
+   color: #ffffff;
+   transition: all 0.3s ease 0s;
+   padding: 22px 61px;
+   @media (min-width: 998px) {
+      &:hover {
+         box-shadow: 0px 0px 50px rgba(171, 4, 54, 0.5);
+      }
+   }
+   @media (max-width: 480px) {
+      font-size: 16px;
+      padding: 13px 57px;
+   }
+}
+.title {
+   position: relative;
+   display: inline-block;
+   font-weight: 700;
+   font-size: 36px;
+   @include lh(44px, 36px);
+   color: #000000;
+   // .title__bg
+   &__bg {
+      position: absolute;
+      width: 430px;
+      height: 41px;
+      background: #ffcede;
+      border-radius: 40px;
+      z-index: -1;
+      &::before {
+         content: "";
+         border-top: 3px dashed black;
+         width: 239px;
+         display: inline-block;
+         position: absolute;
+         bottom: -15px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+   @media (max-width: 1024px) {
+      font-size: 20px;
+      &__bg {
+         width: 215px;
+         height: 21px;
+         &::before {
+            width: 182px;
+         }
+      }
+   }
+}
+
+.text {
+   font-size: 20px;
+   text-align: center;
+   color: #515151;
+   @include lh(28px, 20px);
+   // .text_mt
+   &_mt.text {
+      margin-top: 25px;
+   }
+
+   @media (max-width: 1680px) {
+      font-size: 14px;
+      &_mt.text {
+         margin-top: 15px;
+      }
+   }
+}
+
+@import "./modal";
+@import "./main";
+@import "./desc.scss";
+@import "./quize.scss";
+@import "./help.scss";
+@import "./contact.scss";

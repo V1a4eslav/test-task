@@ -1,0 +1,138 @@
+@import "./mixins.scss";
+@import "../../node_modules/swiper/swiper-bundle";
+
+.quize {
+   min-height: 100vh;
+   padding: 30px 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   // .quize__container
+   &__container {
+   }
+   // .quize__inner
+   &__inner {
+      max-width: 880px;
+      text-align: center;
+      margin-bottom: 50px;
+      @media (max-width: 1680px) {
+         margin-bottom: 20px;
+      }
+   }
+   // .quize__title
+   &__title {
+      margin-bottom: 50px;
+   }
+   // .quize__title-bg
+   &__title-bg {
+      bottom: -11px;
+      left: 0;
+   }
+   // .quize__text
+   &__text {
+      // font-size: 20px;
+      // text-align: center;
+      // color: #515151;
+      // @include lh(28px, 20px);
+      // // .quize__text_mt
+      // &_mt {
+      //    margin-top: 25px;
+      // }
+      // @media (max-width: 1680px) {
+      //    font-size: 14px;
+      //    &_mt {
+      //       margin-top: 15px;
+      //    }
+      // }
+   }
+}
+
+.qsw {
+   position: relative;
+   // .qsw__img-bg
+   &__img-bg {
+      position: absolute;
+      top: -60%;
+      right: 0;
+      width: 32.9%;
+      height: auto;
+      z-index: -1;
+      @media (max-width: 1680px) {
+         top: -56%;
+         right: -2%;
+      }
+      @media (max-width: 1440px) {
+         display: none;
+      }
+   }
+   // .qsw__swiper
+   &__swiper {
+      max-width: 1620px;
+      @media (max-width: 1242px) {
+         padding: 0 10px;
+      }
+   }
+   // .qsw__wrapper
+   &__wrapper {
+      justify-content: center;
+      @media (max-width: 1242px) {
+         justify-content: start;
+      }
+   }
+}
+
+.slide-qsw {
+   display: flex;
+   flex-direction: column;
+   width: 390px;
+   padding: 24px;
+   background: #ffffff;
+   border: 1px solid #dfdede;
+   border-radius: 20px;
+   height: initial;
+   min-height: 420px;
+   // .slide-qsw__img
+   &__img {
+      height: 220px;
+      max-width: 100%;
+      margin-bottom: 29px;
+   }
+   // .slide-qsw__title
+   &__title {
+      position: relative;
+      font-weight: 700;
+      font-size: 18px;
+      @include lh(24px, 16px);
+      margin-bottom: 21px;
+      color: #000000;
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: -9px;
+         left: 0;
+         border-top: 4px dashed #ed769c;
+         width: 170px;
+      }
+   }
+   // .slide-qsw__text
+   &__text {
+      @include lh(24px, 16px);
+   }
+   @media (max-width: 1680px) {
+      width: 290px;
+      padding: 18px 18px 22px 18px;
+      &__img {
+         height: 161.63px;
+      }
+      &__text {
+         font-size: 12px;
+         @include lh(18px, 12px);
+      }
+   }
+}
+
+.swiper {
+   .swiper-pagination-bullet-active {
+      background-color: #ed769c;
+   }
+}

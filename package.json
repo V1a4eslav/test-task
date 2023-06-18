@@ -19,11 +19,18 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-include": "^2.4.1",
     "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
-    "sass": "^1.63.2"
+    "sass": "^1.63.2",
+    "webpack": "^5.86.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^9.4.1"
   }
 }

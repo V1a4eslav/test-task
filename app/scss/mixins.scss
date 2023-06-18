@@ -1,0 +1,27 @@
+// @include lh(24px, 16px);
+@mixin lh($lineHeight, $fontSize) {
+   $lineHeightPercent: calc($lineHeight / $fontSize) * 100%;
+
+   line-height: $lineHeightPercent;
+}
+
+// @include width(1920, 720);
+@mixin width($widthViewport, $widthItem) {
+   $width: calc(($widthItem / $widthViewport) * 100%);
+
+   width: $width;
+}
+
+// @include maxHeight(1080, 920);
+@mixin maxHeight($heightViewport, $heightItem) {
+   $height: calc(($heightItem / $heightViewport) * 100%);
+
+   max-height: $height;
+}
+
+// @include max-width(1920, 720);
+@mixin max-width($widthViewport, $widthItem) {
+   $width: calc(($widthItem / $widthViewport) * 100%);
+
+   max-width: $width;
+}
